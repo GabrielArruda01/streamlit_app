@@ -1,12 +1,10 @@
 import streamlit as st
 import pandas as pd
-import appdirs as ad
-ad.user_cache_dir = lambda *args: "/tmp"
 import yfinance as yf
 
 st.title("Finance Dashboard")
 
-tickers = ('BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD', 'DOT-USD', 'ADA-USD', 'CDI', '^BVSP', '^GSPC', '^IXIC')
+tickers = ('BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD', 'DOT-USD', 'ADA-USD', '^BVSP', '^GSPC', '^IXIC')
 
 dropdown = st.multiselect('Escolha seus ativos',
                           tickers)
